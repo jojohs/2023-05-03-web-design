@@ -24,7 +24,7 @@ body {
 
 .wrap {
     width: 1200px;
-    margin: 0 at;
+    margin: 0 auto;
 }
 
 .header {
@@ -80,4 +80,164 @@ body {
 .gnb ul li:hover a {
     background-color: tomato;
     color: #fff;
+}
+
+/* slide */
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide .item img {
+    display: block;
+}
+
+/* contents */
+.contents {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.tab {
+    /* background-color: aqua; */
+    position: relative;
+    flex: 1;
+}
+
+.tab_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.tab_title h2 {
+    flex: 1;
+}
+
+.tab_title a {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #eee;
+}
+
+.tab_title a.on {
+    background-color: tomato;
+    color: #fff;
+}
+
+.tab_title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 48px;
+    width: 100%;
+    height: 3px;
+    background-color: tomato;
+}
+
+.tab_contents {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+}
+
+.tab_contents .notice {
+    /* display: none; */
+}
+
+.tab_contents .notice a {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 6px;
+}
+
+.tab_contents .gallery {
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    padding: 10px 10px 0 10px;
+    display: none;
+}
+
+
+.tab_contents .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    flex: 1;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    flex: 1;
+}
+
+.link .items {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
+
+.link .items a {
+    display: block;
+    background-color: #ddd;
+    border-radius: 8px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #eee;
+}
+
+.footer h1 a {
+    display: block;
+    text-indent: -9999px;
+    width: 200px;
+    height: 40px;
+    background: url('../images/logo-footer.png') no-repeat center;
+}
+    
+
+
+.footer .sns {
+    display: flex;
+    gap: 30px;
+}
+
+.blind {
+    display: none;
 }
